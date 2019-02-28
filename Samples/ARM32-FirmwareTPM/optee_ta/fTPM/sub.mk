@@ -33,21 +33,21 @@ subdirs-y += lib
 
 global-incdirs-y += include
 global-incdirs-y += reference/include
-global-incdirs-y += platform/include
+global-incdirs-y += op-tee/include
 
-srcs-y += platform/AdminPPI.c
-srcs-y += platform/Cancel.c
-srcs-y += platform/Clock.c
-srcs-y += platform/Entropy.c
-srcs-y += platform/LocalityPlat.c
-srcs-y += platform/NvAdmin.c
-srcs-y += platform/NVMem.c
-srcs-y += platform/PowerPlat.c
-srcs-y += platform/PlatformData.c
-srcs-y += platform/PPPlat.c
-srcs-y += platform/RunCommand.c
-srcs-y += platform/Unique.c
-srcs-y += platform/EPS.c
+srcs-y += op-tee/AdminPPI.c
+srcs-y += op-tee/Cancel.c
+srcs-y += op-tee/Clock.c
+srcs-y += op-tee/Entropy.c
+srcs-y += op-tee/LocalityPlat.c
+srcs-y += op-tee/NvAdmin.c
+srcs-y += op-tee/NVMem.c
+srcs-y += op-tee/PowerPlat.c
+srcs-y += op-tee/PlatformData.c
+srcs-y += op-tee/PPPlat.c
+srcs-y += op-tee/RunCommand.c
+srcs-y += op-tee/Unique.c
+srcs-y += op-tee/EPS.c
 srcs-y += reference/RuntimeSupport.c
 
 srcs-y += fTPM.c
