@@ -1,7 +1,8 @@
+export ROOT			?= $(CURDIR)/..
 export V 			?= 0
 export TA_CPU 			?= cortex-a9
-export TA_CROSS_COMPILE 	?= $(HOME)/toolchains/aarch32/bin/arm-linux-gnueabihf-
-export TA_DEV_KIT_DIR 		?= /media/jbech/SSHD_LINUX/devel/optee_projects/qemu/optee_os/out/arm/export-ta_arm32
+export TA_CROSS_COMPILE 	?= $(ROOT)/toolchains/aarch32/bin/arm-linux-gnueabihf-
+export TA_DEV_KIT_DIR 		?= $(ROOT)/optee_os/out/arm/export-ta_arm32
 export CFG_TEE_TA_LOG_LEVEL 	?= 2
 
 CROSS_COMPILE			?= /usr/bin/ccache $(TA_CROSS_COMPILE)
