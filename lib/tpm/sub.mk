@@ -15,6 +15,7 @@ FTPM_INCLUDES = -include ./reference/include/VendorString.h -include ./reference
 #
 
 FTPM_WARNING_SUPPRESS = -Wno-cast-align \
+			-Wno-cast-function-type \
 			-Wno-implicit-fallthrough \
 			-Wno-missing-braces \
 			-Wno-sign-compare \
