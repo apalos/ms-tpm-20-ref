@@ -1,9 +1,16 @@
-WARNS ?= 1
-NOWERROR ?= 1
-CFG_TA_DEBUG ?= 1
-CFG_TEE_TA_LOG_LEVEL ?= 1
+WARNS 			?= 1
+NOWERROR 		?= 1
+CFG_TA_DEBUG 		?= 1
+CFG_TEE_TA_LOG_LEVEL 	?= 1
 
-cflags-y += -DTHIRTY_TWO_BIT -DCFG_TEE_TA_LOG_LEVEL=$(CFG_TEE_TA_LOG_LEVEL) -D_ARM_ -w -Wno-strict-prototypes -mcpu=$(TA_CPU) -fstack-protector -Wstack-protector
+cflags-y += -D_ARM_ \
+		-DCFG_TEE_TA_LOG_LEVEL=$(CFG_TEE_TA_LOG_LEVEL) \
+		-DTHIRTY_TWO_BIT \
+		-fstack-protector \
+		-mcpu=$(TA_CPU) \
+		-w \
+		-Wno-strict-prototypes \
+		-Wstack-protector
 
 ifeq ($(CFG_ARM64_ta_arm64),y)
 cflags-y += -mstrict-align
@@ -32,7 +39,8 @@ global-incdirs-y += op-tee/TPMCmd/Platform/include/prototypes/
 # Files that comes from the MS 2.0 reference implementation but has been
 # modified to work with OP-TEE. Note that we have removed the original files
 # that otherwise would have been found under the same folder, but under
-# 'lib/TPMCmd/... instead.
+# 'lib/TPMCmd/... instead. This is important to understand when one wants to
+# sync/update with the upstream ms-tpm-20-ref.
 srcs-y += op-tee/TPMCmd/Platform/src/Cancel.c
 srcs-y += op-tee/TPMCmd/Platform/src/Clock.c
 srcs-y += op-tee/TPMCmd/Platform/src/Entropy.c
