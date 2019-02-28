@@ -21,14 +21,6 @@ cflags-y += -Os
 cflags-y += -DNDEBUG
 endif
 
-#
-# Link the required external code into the libraries folder. OP-TEE build
-# does not work well when accessing anything below the root directory. Use
-# symlinks to trick it.
-#
-all: create_lib_symlinks
-clean: clean_lib_symlinks
-
 subdirs-y += lib
 
 global-incdirs-y += include
