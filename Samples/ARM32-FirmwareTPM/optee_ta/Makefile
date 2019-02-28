@@ -6,7 +6,7 @@ export CFG_TEE_TA_LOG_LEVEL 	?= 2
 
 .PHONY: all
 all:
-	$(MAKE) -C fTPM CROSS_COMPILE=$(TA_CROSS_COMPILE)
+	$(MAKE) -C fTPM CROSS_COMPILE="ccache $(TA_CROSS_COMPILE)"
 
 .PHONY: clean
 clean:
