@@ -14,7 +14,12 @@ FTPM_INCLUDES = -include ./reference/include/VendorString.h -include ./reference
 # The TPM causes a few warnings when compiled with GCC which are not critical.
 #
 
-FTPM_WARNING_SUPPRESS = -Wno-cast-align -Wno-switch-default -Wno-suggest-attribute=noreturn -Wno-missing-braces -Wno-sign-compare
+FTPM_WARNING_SUPPRESS = -Wno-cast-align \
+			-Wno-implicit-fallthrough \
+			-Wno-missing-braces \
+			-Wno-sign-compare \
+			-Wno-suggest-attribute=noreturn \
+			-Wno-switch-default
 
 cflags-y += $(FTPM_FLAGS) $(WOLF_SSL_FLAGS) $(FTPM_INCLUDES) $(FTPM_WARNING_SUPPRESS)
 
