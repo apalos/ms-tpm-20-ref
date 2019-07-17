@@ -7,7 +7,7 @@ export CFG_TEE_TA_LOG_LEVEL 	?= 3
 
 CROSS_COMPILE			?= /usr/bin/ccache $(TA_CROSS_COMPILE)
 
-BINARY=bc50d971-d4c9-42c4-82cb-123456789123
+BINARY=bc50d971-d4c9-42c4-82cb-343fb7f37896
 
 O ?= out
 WOLF_ROOT := lib/external/wolfssl
